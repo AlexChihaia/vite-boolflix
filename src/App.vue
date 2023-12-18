@@ -30,7 +30,7 @@ export default {
                 console.error(`Error fetching ${contentArray}:`, error);
             });
         },
-        // This method inovokes makeApiCall to make the two api calls 
+        // This method invokes the two calls
         search() {
             this.makeApiCall(store.apiConfig.filmsKeyword, 'films');
             this.makeApiCall(store.apiConfig.seriesKeyword, 'series');
@@ -44,12 +44,8 @@ export default {
 </script>
 
 <template>
-    <AppHeader @searchTrigger="search" />
-    <ul>
-        <li v-for="film in store.films">
-            <p>{{ film.title }}</p>
-        </li>
-    </ul>
+    <AppHeader @searchContent="search" />
+    <AppMain />
 </template>
 
 <style scoped lang="scss"></style>
