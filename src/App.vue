@@ -44,6 +44,8 @@ export default {
 </script>
 
 <template>
+    <font-awesome-icon icon="fa-solid fa-star" />
+    <font-awesome-icon icon="fa-regular fa-star" />
     <AppHeader @searchContent="search" />
     <AppMain />
 </template>
